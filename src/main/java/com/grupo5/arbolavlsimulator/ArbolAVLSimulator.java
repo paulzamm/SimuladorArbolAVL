@@ -4,7 +4,8 @@
 
 package com.grupo5.arbolavlsimulator;
 
-import com.grupo5.vista.Home;
+import com.grupo5.vista.Simulador;
+import com.grupo5.vista.Inicio;
 
 /**
  *
@@ -14,7 +15,7 @@ public class ArbolAVLSimulator {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        Home panel = new Home();
+        Inicio panel = new Inicio();
         panel.setVisible(true);
     }
 }

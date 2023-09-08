@@ -25,4 +25,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.grupo5.arbolavlsimulator.ArbolAVLSimulator</exec.mainClass>
     </properties>
+    <name>ArbolAVLSimulador</name>
 </project>

@@ -31,7 +31,7 @@ public class ArbolAVL<T extends Comparable<T>> extends ArbolBB<T> {
 	
 	/**
 	 * Constructor de un �rbol AVL sin nombre y con un nodo ra�z con el <em>dato</em>
-	 * @param raiz Nodo ra�z
+	 * @param dato Nodo Raiz
 	 */
 	public ArbolAVL(T dato) {
 		super(null, dato);

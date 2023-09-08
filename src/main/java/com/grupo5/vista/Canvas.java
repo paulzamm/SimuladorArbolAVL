@@ -24,48 +24,78 @@ public class Canvas extends javax.swing.JPanel {
     public Canvas(ArbolAVL<Integer> arbol) {
         initComponents();
         Canvas.arbol = arbol;
+        nodoBusqueda = null;
     }
     
     public static ArbolAVL<Integer> arbol;
+    public static NodoArbol<Integer> nodoBusqueda;
     
     /**
-     *
+     * Asigna el arbol que usara el canvas
      * @param Arbol
      */
     public void setArbol(ArbolAVL Arbol){
         arbol = Arbol;
+        
     }
     
+    /**
+     * Asigna un nodo que sera buscado y pintado dentro del canvas
+     * @param nodo 
+     */
+    public void setnodoBusqueda(NodoArbol<Integer> nodo){
+        nodoBusqueda = nodo;
+    }
+    
+    /**
+     * Vuelve a repintar el canvas
+     */
     public void repintar(){
         repaint();
     }
     
+    /**
+     * Instrucciones a realizar cuando el canvas sea pintado
+     * @param g 
+     */
     @Override
     public void paint(Graphics g){
         super.paint(g);
         dibujarNodo(g, getWidth()/2, 20, arbol.getRaiz());
-        //dibujarNodo();
     }
     
+    /**
+     * Metodo recursivo que pinta cada uno de los nodos de un arbol AVL
+     * <br>
+     * Recibe las posiciones (x) y (y) para denterminar el lugar donde el nodo sera pintado
+     * @param g
+     * @param x
+     * @param y
+     * @param nodo 
+     */
     public void dibujarNodo(Graphics g, int x, int y, NodoArbol<Integer> nodo){
         if(nodo != null) {
-            int anchoExtra = AlgoritmosArbol.numeroDeNodos(nodo)*(50/2);
-                  
-            //int anchoExtra = 0;
-                    //this.arbol.nodosCompletos(nodo)*(this.ancho/2);
             g.setColor(Color.GREEN);
-            //g.setColor(Color.GREEN);
             g.fillOval(x, y, 30, 30);
+            if(nodoBusqueda!=null && nodoBusqueda.equals(nodo)){
+                g.setColor(Color.RED);
+                g.drawOval(x, y, 30, 30);
+            }
             g.setColor(Color.BLACK);
             g.setFont(new Font( "Arial", Font.BOLD, 14 ) );
             g.drawString(nodo.getClave().toString(), x+8, y+18);
+            g.setFont(new Font( "Arial", Font.ITALIC, 10 ) );
+            g.drawString(nodo.getFe()+"", x+8+5, y+18-20);
+ 
+            
+            int anchoExtra = AlgoritmosArbol.numeroDeNodos(nodo)*(15);
             g.setColor(Color.BLACK);
             if(nodo.getIz() != null)
-		g.drawLine(x+15, y+15, x-50-anchoExtra+15, y+50+15);
+		g.drawLine(x+15, y+15, x-25-anchoExtra+15, y+30+15);
             if(nodo.getDe() != null)
-		g.drawLine(x+15, y+15, x+50+anchoExtra+15, y+50+15);
-            dibujarNodo(g, x-50-anchoExtra, y+50, nodo.getIz());
-            dibujarNodo(g, x+50+anchoExtra, y+50, nodo.getDe());
+		g.drawLine(x+15, y+15, x+25+anchoExtra+15, y+30+15);
+            dibujarNodo(g, x-25-anchoExtra, y+30, nodo.getIz());
+            dibujarNodo(g, x+25+anchoExtra, y+30, nodo.getDe());
 	}
     
     }
@@ -83,11 +113,11 @@ public class Canvas extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 422, Short.MAX_VALUE)
+            .addGap(0, 644, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 333, Short.MAX_VALUE)
+            .addGap(0, 509, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

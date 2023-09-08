@@ -13,8 +13,7 @@ import arbolBinario.ArbolAVL;
 public class Salida extends javax.swing.JPanel {
 
     /**
-     * Creates new form Salida
-     * @param
+     * 
      */
     public Salida() {
         initComponents();
@@ -82,18 +81,22 @@ public class Salida extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metodo ejecutado al accionar el boton de salir
+     * @param evt 
+     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * Metodo ejecutado al accionar el boton de cancelar
+     * @param evt 
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Home.mostrarCanvas();
+        Simulador.mostrarCanvas();
+        Simulador.estadoBotones("Generar");
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    public static void pintarArbol(){
-        
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

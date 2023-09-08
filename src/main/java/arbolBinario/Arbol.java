@@ -106,7 +106,7 @@ public class Arbol<T extends Comparable<T>> implements Serializable{
 	
 	public final static <T extends Comparable<T>> void juntar(Arbol<T> arbol, T dato, Arbol<T> a1, Arbol<T> a2) {
 		if(a1 == null && a2 == null)
-			System.out.println("No se pueden juntar árboles nulos");
+			System.out.println("No se pueden juntar Arboles nulos");
 		else 
 			if(a1 == null && a2 != null) {
 				arbol.setRaiz(new NodoArbol<>(dato, null, a2.getRaiz()));
@@ -337,11 +337,11 @@ public class Arbol<T extends Comparable<T>> implements Serializable{
 	
 	public void info() {
 		if(this.getRaiz() != null) {
-			System.out.println("Información del árbol " + this.getNombre());
+			System.out.println("Informacion del Arbol " + this.getNombre());
 			System.out.println("Altura: " + this.altura());
-			System.out.println("Número de nodos: " + this.numeroDeNodos());
-			System.out.println("Número de hojas: " + this.numeroDeHojas());
-			System.out.println("Arbol está completo?: " + (this.esCompleto()?"SI":"NO"));
+			System.out.println("Numero de nodos: " + this.numeroDeNodos());
+			System.out.println("Numero de hojas: " + this.numeroDeHojas());
+			System.out.println("Arbol esta completo?: " + (this.esCompleto()?"SI":"NO"));
 			System.out.println("Dato menor: " + this.menor());
 			System.out.println("Dato mayor: " + this.mayor());
 			System.out.println("Recorridos");
