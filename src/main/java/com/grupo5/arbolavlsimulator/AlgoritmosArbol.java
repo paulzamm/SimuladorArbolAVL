@@ -78,7 +78,7 @@ public class AlgoritmosArbol {
      * <br>
      * Usa una estructura de datos auxiliar cola para almacenar cada uno de los nodos
      * @param arbol
-     * @return 
+     * @return String
      */
     public static String textoAmplitud(NodoArbol arbol){
         NodoArbol p;
@@ -106,6 +106,13 @@ public class AlgoritmosArbol {
         return sb.toString();
     }
     
+    /**
+     * Retorna una cadena de String del recorrido por Niveles de un arbolAvl
+     * <br>
+     * Usa una estructura de datos auxiliar cola para almacenar cada uno de los nodos con su respectiva informacion.
+     * @param arbol
+     * @return String
+     */
     public static String textoAmplitudNiveles(ArbolAVL arbol){
         NodoArbol p;
         StringBuffer sb = new StringBuffer();
@@ -182,7 +189,7 @@ public class AlgoritmosArbol {
     /**
      * Metodo usado para calcular el numero de nodos hojas de un Arbol
      * @param arbol
-     * @return 
+     * @return int
      */
     public static int nodosHojas(NodoArbol arbol){
         if(arbol != null) {

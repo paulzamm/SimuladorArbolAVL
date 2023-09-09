@@ -13,7 +13,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 /**
- *
+ * Formulario de todo el simulador del arbol AVL con sus repectivas funcionalidades y caracteristicas
  * @author mmall
  */
 public class Simulador extends javax.swing.JFrame {
@@ -570,6 +570,7 @@ public class Simulador extends javax.swing.JFrame {
     private void BotonAccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAccionActionPerformed
         String accion = BotonAccion.getText();
         
+        
         if(accion.equals("Generar")){
             arbol = AlgoritmosArbol.arbolAleatorio(Integer.parseInt(jSpinner1.getValue().toString()));
             canvas.setArbol(arbol);
@@ -605,7 +606,7 @@ public class Simulador extends javax.swing.JFrame {
             textoAviso.setText("<html>Dato invalido<br><br>Ingrese un numero positivo de tres digitos.</html>");
         }
             
-        
+        jTextField1.setText("");
         mostrarCanvas();
         informacionEstadoArbol();
     }//GEN-LAST:event_BotonAccionActionPerformed

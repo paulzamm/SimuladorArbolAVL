@@ -7,7 +7,7 @@ package com.grupo5.arbolavlsimulator;
 import com.grupo5.vista.Inicio;
 
 /**
- * Clase controladora de todo el proyecto
+ * Clase controladora de todo el proyecto.
  * @author MANUEL MALLA
  */
 public class ArbolAVLSimulator {
