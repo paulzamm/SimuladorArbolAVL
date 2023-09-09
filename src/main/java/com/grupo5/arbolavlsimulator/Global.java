@@ -7,6 +7,10 @@ package com.grupo5.arbolavlsimulator;
  */
 import java.io.File;
 
+/**
+ * Clase usada para obtener la ruta del proyecto
+ * @author mmall
+ */
 public class Global {
     
     /**

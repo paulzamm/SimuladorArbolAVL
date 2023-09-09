@@ -10,9 +10,11 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import com.grupo5.arbolavlsimulator.AlgoritmosArbol;
+import java.awt.Dimension;
+import javax.swing.JLabel;
 
 /**
- *
+ * JPanel usado para pintar el arbol AVL
  * @author mmall
  */
 public class Canvas extends javax.swing.JPanel {
@@ -29,6 +31,7 @@ public class Canvas extends javax.swing.JPanel {
     
     public static ArbolAVL<Integer> arbol;
     public static NodoArbol<Integer> nodoBusqueda;
+    public static Dimension defaultSize = new Dimension(WIDTH, HEIGHT);
     
     /**
      * Asigna el arbol que usara el canvas
@@ -51,6 +54,19 @@ public class Canvas extends javax.swing.JPanel {
      * Vuelve a repintar el canvas
      */
     public void repintar(){
+        int x = AlgoritmosArbol.nodosHojas(arbol.getRaiz())*200+200;
+        int y =  arbol.altura()*75;
+        
+        int w = defaultSize.width;
+        int h = defaultSize.height;
+        
+        if(x>defaultSize.width){
+            w = x;
+            if(y>defaultSize.height)
+                h = y;
+            this.setPreferredSize(new Dimension(w, h));
+        }
+        
         repaint();
     }
     
@@ -86,16 +102,15 @@ public class Canvas extends javax.swing.JPanel {
             g.drawString(nodo.getClave().toString(), x+8, y+18);
             g.setFont(new Font( "Arial", Font.ITALIC, 10 ) );
             g.drawString(nodo.getFe()+"", x+8+5, y+18-20);
- 
             
-            int anchoExtra = AlgoritmosArbol.numeroDeNodos(nodo)*(15);
+            int anchoExtra = AlgoritmosArbol.numeroDeNodosCompleto(nodo)*(80/2);
             g.setColor(Color.BLACK);
             if(nodo.getIz() != null)
-		g.drawLine(x+15, y+15, x-25-anchoExtra+15, y+30+15);
+		g.drawLine(x+15, y+15, x-50-anchoExtra+15, y+75+15);
             if(nodo.getDe() != null)
-		g.drawLine(x+15, y+15, x+25+anchoExtra+15, y+30+15);
-            dibujarNodo(g, x-25-anchoExtra, y+30, nodo.getIz());
-            dibujarNodo(g, x+25+anchoExtra, y+30, nodo.getDe());
+		g.drawLine(x+15, y+15, x+50+anchoExtra+15, y+75+15);
+            dibujarNodo(g, x-50-anchoExtra, y+75, nodo.getIz());
+            dibujarNodo(g, x+50+anchoExtra, y+75, nodo.getDe());
 	}
     
     }
@@ -109,19 +124,22 @@ public class Canvas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 644, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

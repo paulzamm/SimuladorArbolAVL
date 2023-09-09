@@ -14,7 +14,7 @@ import tadCola.TadCola;
 import Algoritmos.Algoritmos;
 
 /**
- *
+ * Clase contenedora de los algoritmos para arboles usados durante la ejecucion del simulador
  * @author mmall
  */
 public class AlgoritmosArbol {
@@ -162,15 +162,35 @@ public class AlgoritmosArbol {
     }
     
     /**
-     * Metodo recursivo que determina los numeros de nodos hijos de un nodo padre
+     * Metodo recursivo que determina el numero de nodos completos.
      * @param arbol
      * @return int
      */
-    public static int numeroDeNodos(NodoArbol arbol) {
-	if(arbol != null) {
-            return 1 + numeroDeNodos(arbol.getIz()) + numeroDeNodos(arbol.getDe());
-	}
-        
-	return 0;
+    public static int numeroDeNodosCompleto(NodoArbol arbol) {
+	if (arbol == null) {
+            return 0;
+        } else {
+            if (arbol.getIz() != null && arbol.getDe() != null) {
+                return numeroDeNodosCompleto(arbol.getIz()) + numeroDeNodosCompleto(arbol.getDe()) + 1;
+            } else {
+                return numeroDeNodosCompleto(arbol.getIz()) + numeroDeNodosCompleto(arbol.getDe());
+            }
+
+        }
+    }
+    
+    /**
+     * Metodo usado para calcular el numero de nodos hojas de un Arbol
+     * @param arbol
+     * @return 
+     */
+    public static int nodosHojas(NodoArbol arbol){
+        if(arbol != null) {
+            if(arbol.getIz() == null && arbol.getDe() == null){
+                return 1;
+            }
+            return numeroDeNodosCompleto(arbol.getIz()) + numeroDeNodosCompleto(arbol.getDe());
+        }
+        return 0;
     }
 }

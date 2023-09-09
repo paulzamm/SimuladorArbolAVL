@@ -4,15 +4,13 @@
 
 package com.grupo5.arbolavlsimulator;
 
-import com.grupo5.vista.Simulador;
 import com.grupo5.vista.Inicio;
 
 /**
- *
- * @author mmall
+ * Clase controladora de todo el proyecto
+ * @author MANUEL MALLA
  */
 public class ArbolAVLSimulator {
-
     public static void main(String[] args) {
         System.out.println("Hello World!");
         Inicio panel = new Inicio();
