@@ -12,7 +12,6 @@ import com.grupo5.vista.Inicio;
  */
 public class ArbolAVLSimulator {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         Inicio panel = new Inicio();
         panel.setVisible(true);
     }

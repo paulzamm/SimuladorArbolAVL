@@ -7,19 +7,22 @@ package com.grupo5.vista;
 import arbolBinario.ArbolAVL;
 import com.grupo5.arbolavlsimulator.AlgoritmosArbol;
 import com.grupo5.arbolavlsimulator.Global;
+import static com.grupo5.vista.Simulador.estadoBotones;
+import static com.grupo5.vista.Simulador.mostrarCanvas;
 import java.awt.CardLayout;
 import java.awt.Color;
+import static java.awt.Frame.MAXIMIZED_BOTH;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 /**
- * Formulario de todo el simulador del arbol AVL con sus repectivas funcionalidades y caracteristicas
- * @author mmall
+ *
+ * @author paul
  */
 public class Simulador extends javax.swing.JFrame {
 
     /**
-     * Crea un nuevo Formulario Simulador
+     * Creates new form Simulador2
      */
     public Simulador() {
         initComponents();
@@ -34,7 +37,6 @@ public class Simulador extends javax.swing.JFrame {
         canvas.setBounds(0, 0, 2000, 2000);
         mostrarCanvas();
     }
-    
     private static ArbolAVL<Integer> arbol;
     private static Canvas canvas;
     
@@ -165,10 +167,9 @@ public class Simulador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Background = new javax.swing.JPanel();
+        Footer = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         BotonAccion = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
@@ -176,17 +177,18 @@ public class Simulador extends javax.swing.JFrame {
         jSpinner1 = new javax.swing.JSpinner();
         BotonAccion1 = new javax.swing.JButton();
         txtTitulo = new javax.swing.JLabel();
-        Footer = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         botones = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         BotonAleatorio = new javax.swing.JButton();
         BotonInsertar = new javax.swing.JButton();
         BotonEliminar = new javax.swing.JButton();
         BotonBusqueda = new javax.swing.JButton();
         BotonSalida = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         textNumNodos = new javax.swing.JLabel();
         textAltura = new javax.swing.JLabel();
         TextNodoMayor = new javax.swing.JLabel();
@@ -204,36 +206,32 @@ public class Simulador extends javax.swing.JFrame {
             }
         });
 
-        Background.setBackground(new java.awt.Color(255, 255, 255));
-        Background.setMinimumSize(new java.awt.Dimension(1550, 1030));
+        Footer.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel1.setText("UTMACH COPYRIGTH 2023 | 2023-1 | MALLA, ARICA, ALTAFUYA, ÁVILA, GONZÁLEZ | 3RO A");
+
+        javax.swing.GroupLayout FooterLayout = new javax.swing.GroupLayout(Footer);
+        Footer.setLayout(FooterLayout);
+        FooterLayout.setHorizontalGroup(
+            FooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FooterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(886, Short.MAX_VALUE))
+        );
+        FooterLayout.setVerticalGroup(
+            FooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FooterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(Footer, java.awt.BorderLayout.PAGE_END);
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
-
-        jLabel8.setFont(new java.awt.Font("OCR A Extended", 1, 48)); // NOI18N
-        jLabel8.setText("ARBOL AVL");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 200, 35));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 200, 35));
 
         BotonAccion.setText("Generar");
         BotonAccion.addActionListener(new java.awt.event.ActionListener() {
@@ -245,13 +243,13 @@ public class Simulador extends javax.swing.JFrame {
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         textoAviso.setForeground(new java.awt.Color(255, 51, 51));
-        jPanel2.add(textoAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, 90));
+        jPanel2.add(textoAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 240, 100));
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
         jSpinner1.setFocusable(false);
-        jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 200, 40));
+        jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 200, 40));
 
-        BotonAccion1.setText("Limpiar Arbol");
+        BotonAccion1.setText("Limpiar Árbol");
         BotonAccion1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAccion1ActionPerformed(evt);
@@ -260,31 +258,64 @@ public class Simulador extends javax.swing.JFrame {
         jPanel2.add(BotonAccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 140, 35));
 
         txtTitulo.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
-        txtTitulo.setText("Generar un arbol aleatorio");
-        jPanel2.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        txtTitulo.setText("Generar un árbol aleatorio");
+        jPanel2.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
-        Footer.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jLabel1.setText("UTMACH COPYRIGTH 2023 | 2023-1 | MALLA, ARICA, ALTAFUYA, AVILA, GONSALEZ | 3RO A");
+        botones.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout FooterLayout = new javax.swing.GroupLayout(Footer);
-        Footer.setLayout(FooterLayout);
-        FooterLayout.setHorizontalGroup(
-            FooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FooterLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(852, Short.MAX_VALUE))
-        );
-        FooterLayout.setVerticalGroup(
-            FooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FooterLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel8.setFont(new java.awt.Font("OCR A Extended", 1, 44)); // NOI18N
+        jLabel8.setText("ARBOL AVL");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
-        BotonAleatorio.setText("Arbol Aleatorio");
+        botones.add(jPanel1, java.awt.BorderLayout.LINE_START);
+
+        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel2.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        jLabel2.setText("ESTADO DEL ARBOL");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        botones.add(jPanel3, java.awt.BorderLayout.LINE_END);
+
+        jPanel5.setLayout(new java.awt.GridLayout(1, 0));
+
+        BotonAleatorio.setText("Árbol Aleatorio");
         BotonAleatorio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BotonAleatorio.setMinimumSize(new java.awt.Dimension(200, 50));
         BotonAleatorio.setPreferredSize(new java.awt.Dimension(200, 50));
@@ -294,6 +325,7 @@ public class Simulador extends javax.swing.JFrame {
                 BotonAleatorioActionPerformed(evt);
             }
         });
+        jPanel5.add(BotonAleatorio);
 
         BotonInsertar.setText("Inserción");
         BotonInsertar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -303,6 +335,7 @@ public class Simulador extends javax.swing.JFrame {
                 BotonInsertarActionPerformed(evt);
             }
         });
+        jPanel5.add(BotonInsertar);
 
         BotonEliminar.setText("Eliminación");
         BotonEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -312,8 +345,9 @@ public class Simulador extends javax.swing.JFrame {
                 BotonEliminarActionPerformed(evt);
             }
         });
+        jPanel5.add(BotonEliminar);
 
-        BotonBusqueda.setText("Busqueda");
+        BotonBusqueda.setText("Búsqueda");
         BotonBusqueda.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BotonBusqueda.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         BotonBusqueda.addActionListener(new java.awt.event.ActionListener() {
@@ -321,6 +355,7 @@ public class Simulador extends javax.swing.JFrame {
                 BotonBusquedaActionPerformed(evt);
             }
         });
+        jPanel5.add(BotonBusqueda);
 
         BotonSalida.setText("Salida");
         BotonSalida.addActionListener(new java.awt.event.ActionListener() {
@@ -328,64 +363,18 @@ public class Simulador extends javax.swing.JFrame {
                 BotonSalidaActionPerformed(evt);
             }
         });
+        jPanel5.add(BotonSalida);
 
-        javax.swing.GroupLayout botonesLayout = new javax.swing.GroupLayout(botones);
-        botones.setLayout(botonesLayout);
-        botonesLayout.setHorizontalGroup(
-            botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botonesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BotonAleatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        botonesLayout.setVerticalGroup(
-            botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botonesLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(BotonSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonBusqueda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonAleatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(25, 25, 25))
-        );
+        botones.add(jPanel5, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(botones, java.awt.BorderLayout.PAGE_START);
 
         jPanel4.setBackground(new java.awt.Color(0, 204, 204));
-
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
-        jPanel1.setPreferredSize(new java.awt.Dimension(405, 100));
-
-        jLabel2.setFont(new java.awt.Font("OCR A Extended", 1, 36)); // NOI18N
-        jLabel2.setText("ESTADO DEL ARBOL");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel2)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        jPanel4.setMinimumSize(new java.awt.Dimension(280, 435));
+        jPanel4.setPreferredSize(new java.awt.Dimension(280, 435));
 
         textNumNodos.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
-        textNumNodos.setText("Numero de nodos:");
+        textNumNodos.setText("Número de nodos:");
 
         textAltura.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
         textAltura.setText("Altura:");
@@ -408,23 +397,25 @@ public class Simulador extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(TextNodoMayor)
                     .addComponent(textAltura)
                     .addComponent(textNumNodos)
                     .addComponent(TextNodoMenor))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(8, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(32, 32, 32)
                 .addComponent(textNumNodos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textAltura)
@@ -434,131 +425,26 @@ public class Simulador extends javax.swing.JFrame {
                 .addComponent(TextNodoMayor)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(446, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(194, 194, 194)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(98, Short.MAX_VALUE)))
         );
+
+        getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_END);
 
         PanelCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPaneMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 10));
-        PanelCentral.add(jScrollPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 828, 632));
+        PanelCentral.add(jScrollPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 570));
 
-        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
-        Background.setLayout(BackgroundLayout);
-        BackgroundLayout.setHorizontalGroup(
-            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelCentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addComponent(Footer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        BackgroundLayout.setVerticalGroup(
-            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelCentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 741, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Footer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(PanelCentral, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    /**
-     * Metodo ejecutado cuando el boton de arbol aleatorio es accionado.
-     * <br>
-     * Pinta en azul el boton Generar dentro de los botones del menu.
-     * <br>
-     * Coloca el texto del titulo de acuerdo a la seccion.
-     * <br>
-     * Coloca el texto del boton de accion a Generar.
-     * <br>
-     * Limpia los textos de aviso. 
-     * @param evt 
-     */
-    private void BotonAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAleatorioActionPerformed
-        estadoBotones("Generar");
-        txtTitulo.setText("Generar un arbol aleatorio");
-        BotonAccion.setText("Generar");
-        limpiarAccion(true);
-    }//GEN-LAST:event_BotonAleatorioActionPerformed
-    
-    /**
-     * Metodo ejecutado cuando el boton de eliminar es accionado.
-     * <br>
-     * Pinta en azul el boton Eliminacion dentro de los botones del menu.
-     * <br>
-     * Coloca el texto del titulo de acuerdo a la seccion.
-     * <br>
-     * Coloca el texto del boton de accion a Eliminar.
-     * <br>
-     * Limpia los textos de aviso.
-     * @param evt 
-     */
-    private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
-        estadoBotones("Eliminar");
-        txtTitulo.setText("Eliminar un dato");
-        BotonAccion.setText("Eliminar");
-        limpiarAccion(false);
-    }//GEN-LAST:event_BotonEliminarActionPerformed
-
-    /**
-     * Funcion ejecutada al abrir la ventana del programa.
-     * <br>
-     * Llama a la funcion de mostrarCanvas.
-     * @param evt 
-     */
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        mostrarCanvas();
-    }//GEN-LAST:event_formWindowActivated
-    
-    /**
-     * Metodo ejecutado cuando el boton de Insercion es accionado.
-     * <br>
-     * Pinta en azul el boton Insertar dentro de los botones del menu.
-     * <br>
-     * Coloca el texto del titulo de acuerdo a la seccion.
-     * <br>
-     * Coloca el texto del boton de accion a Insertar.
-     * <br>
-     * Limpia los textos de aviso.
-     * @param evt 
-     */
-    private void BotonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInsertarActionPerformed
-        estadoBotones("Ingresar");
-        txtTitulo.setText("Insertar un dato");
-        BotonAccion.setText("Ingresar");
-        limpiarAccion(false);
-    }//GEN-LAST:event_BotonInsertarActionPerformed
-
     /**
      * Funcion ejecutada cuando el boton de multi-accion del menu es ejecutado.
      * <br>
@@ -569,8 +455,7 @@ public class Simulador extends javax.swing.JFrame {
      */
     private void BotonAccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAccionActionPerformed
         String accion = BotonAccion.getText();
-        
-        
+
         if(accion.equals("Generar")){
             arbol = AlgoritmosArbol.arbolAleatorio(Integer.parseInt(jSpinner1.getValue().toString()));
             canvas.setArbol(arbol);
@@ -599,18 +484,85 @@ public class Simulador extends javax.swing.JFrame {
                 }else{
                     textoAviso.setForeground(Color.RED);
                     textoAviso.setText("No se ha encontrado el dato: "+jTextField1.getText());
-                } 
+                }
             }
         }else{
             textoAviso.setForeground(Color.RED);
             textoAviso.setText("<html>Dato invalido<br><br>Ingrese un numero positivo de tres digitos.</html>");
         }
-            
+
         jTextField1.setText("");
         mostrarCanvas();
         informacionEstadoArbol();
     }//GEN-LAST:event_BotonAccionActionPerformed
-    
+    /**
+     * Metodo ejecutado cuando el boton de Limpiar Arbol es accionado.
+     * <br>
+     * Crea un nuevo arbol y lo asigna a la variable arbol del formulario.
+     * <br>
+     * Llama al metodo limpiar Accion.
+     * @param evt 
+     */
+    private void BotonAccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAccion1ActionPerformed
+        arbol = new ArbolAVL<>();
+        canvas.setArbol(arbol);
+
+        limpiarAccion(BotonAccion.getText().equals("Generar"));
+    }//GEN-LAST:event_BotonAccion1ActionPerformed
+     /**
+     * Metodo ejecutado cuando el boton de arbol aleatorio es accionado.
+     * <br>
+     * Pinta en azul el boton Generar dentro de los botones del menu.
+     * <br>
+     * Coloca el texto del titulo de acuerdo a la seccion.
+     * <br>
+     * Coloca el texto del boton de accion a Generar.
+     * <br>
+     * Limpia los textos de aviso. 
+     * @param evt 
+     */
+    private void BotonAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAleatorioActionPerformed
+        estadoBotones("Generar");
+        txtTitulo.setText("Generar un arbol aleatorio");
+        BotonAccion.setText("Generar");
+        limpiarAccion(true);
+    }//GEN-LAST:event_BotonAleatorioActionPerformed
+     /**
+     * Metodo ejecutado cuando el boton de Insercion es accionado.
+     * <br>
+     * Pinta en azul el boton Insertar dentro de los botones del menu.
+     * <br>
+     * Coloca el texto del titulo de acuerdo a la seccion.
+     * <br>
+     * Coloca el texto del boton de accion a Insertar.
+     * <br>
+     * Limpia los textos de aviso.
+     * @param evt 
+     */
+    private void BotonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInsertarActionPerformed
+        estadoBotones("Ingresar");
+        txtTitulo.setText("Insertar un dato");
+        BotonAccion.setText("Ingresar");
+        limpiarAccion(false);
+    }//GEN-LAST:event_BotonInsertarActionPerformed
+    /**
+     * Metodo ejecutado cuando el boton de eliminar es accionado.
+     * <br>
+     * Pinta en azul el boton Eliminacion dentro de los botones del menu.
+     * <br>
+     * Coloca el texto del titulo de acuerdo a la seccion.
+     * <br>
+     * Coloca el texto del boton de accion a Eliminar.
+     * <br>
+     * Limpia los textos de aviso.
+     * @param evt 
+     */
+    private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
+        estadoBotones("Eliminar");
+        txtTitulo.setText("Eliminar un dato");
+        BotonAccion.setText("Eliminar");
+        limpiarAccion(false);
+    }//GEN-LAST:event_BotonEliminarActionPerformed
     /**
      * Metodo ejecutado cuando el boton de Busqueda es accionado.
      * <br>
@@ -629,8 +581,7 @@ public class Simulador extends javax.swing.JFrame {
         BotonAccion.setText("Buscar");
         limpiarAccion(false);
     }//GEN-LAST:event_BotonBusquedaActionPerformed
-
-    /**
+     /**
      * Metodo ejecutado cuando el boton de Salida es accionado.
      * <br>
      * Pinta en azul el boton Salida dentro de los botones del menu.
@@ -648,25 +599,21 @@ public class Simulador extends javax.swing.JFrame {
             PanelCentral.repaint();
         }catch(Exception ex){}
     }//GEN-LAST:event_BotonSalidaActionPerformed
-
     /**
-     * Metodo ejecutado cuando el boton de Limpiar Arbol es accionado.
+     * Funcion ejecutada al abrir la ventana del programa.
      * <br>
-     * Crea un nuevo arbol y lo asigna a la variable arbol del formulario.
-     * <br>
-     * Llama al metodo limpiar Accion.
+     * Llama a la funcion de mostrarCanvas.
      * @param evt 
      */
-    private void BotonAccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAccion1ActionPerformed
-        arbol = new ArbolAVL<>();
-        canvas.setArbol(arbol);
-        
-        limpiarAccion(BotonAccion.getText().equals("Generar"));
-    }//GEN-LAST:event_BotonAccion1ActionPerformed
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        mostrarCanvas();
+    }//GEN-LAST:event_formWindowActivated
 
-
+    /**
+     * @param args the command line arguments
+     */
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Background;
     private javax.swing.JButton BotonAccion;
     private javax.swing.JButton BotonAccion1;
     private static javax.swing.JButton BotonAleatorio;
@@ -688,6 +635,7 @@ public class Simulador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private static javax.swing.JScrollPane jScrollPaneMain;
     private javax.swing.JSpinner jSpinner1;
