@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.grupo5.vista;
+package vista;
 
 import arbolBinario.ArbolAVL;
-import com.grupo5.arbolavlsimulator.AlgoritmosArbol;
-import com.grupo5.arbolavlsimulator.Global;
-import static com.grupo5.vista.Simulador.estadoBotones;
-import static com.grupo5.vista.Simulador.mostrarCanvas;
+import arbolavlsimulator.AlgoritmosArbol;
+import arbolavlsimulator.Global;
+import static vista.Simulador.estadoBotones;
+import static vista.Simulador.mostrarCanvas;
 import java.awt.CardLayout;
 import java.awt.Color;
 import static java.awt.Frame.MAXIMIZED_BOTH;
@@ -30,7 +30,7 @@ public class Simulador extends javax.swing.JFrame {
         arbol = new ArbolAVL<>();
         Simulador.canvas = new Canvas(arbol);
         setLocationRelativeTo(this);
-        ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
+        ImageIcon icon = new ImageIcon(Global.getPath()+"\\recursos\\icono.png");
         setIconImage(icon.getImage());
         limpiarAccion(true);
         estadoBotones("Generar");
@@ -245,7 +245,7 @@ public class Simulador extends javax.swing.JFrame {
         textoAviso.setForeground(new java.awt.Color(255, 51, 51));
         jPanel2.add(textoAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 240, 100));
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 8, 1));
         jSpinner1.setFocusable(false);
         jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 200, 40));
 

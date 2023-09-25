@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.grupo5.vista;
+package vista;
 
 import arbolBinario.ArbolAVL;
 import arbolBinario.NodoArbol;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import com.grupo5.arbolavlsimulator.AlgoritmosArbol;
+import arbolavlsimulator.AlgoritmosArbol;
 import java.awt.Dimension;
 import javax.swing.JLabel;
 

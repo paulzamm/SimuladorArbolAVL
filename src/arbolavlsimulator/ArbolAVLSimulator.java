@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.grupo5.arbolavlsimulator;
+package arbolavlsimulator;
 
-import com.grupo5.vista.Inicio;
+import vista.Inicio;
 
 /**
  * Clase controladora de todo el proyecto.

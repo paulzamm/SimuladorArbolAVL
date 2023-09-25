@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.grupo5.vista;
+package vista;
 
-import com.grupo5.arbolavlsimulator.Global;
+import arbolavlsimulator.Global;
 import javax.swing.ImageIcon;
 
 /**
@@ -19,10 +19,10 @@ public class InfoDesarrolladores extends javax.swing.JFrame {
     public InfoDesarrolladores() {
         initComponents();
         setLocationRelativeTo(this);
-        ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
+        ImageIcon icon = new ImageIcon(Global.getPath()+"\\recursos\\icono.png");
         setIconImage(icon.getImage());
-        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\fondoDesarrolladores.jpg"));
-        buttonBack.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonRegresar.png"));
+        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\fondoDesarrolladores.jpg"));
+        buttonBack.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\botonRegresar.png"));
     }
 
     /**

@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.grupo5.vista;
+package vista;
 
-import com.grupo5.arbolavlsimulator.Global;
+import arbolavlsimulator.Global;
 import javax.swing.ImageIcon;
 
 /**
@@ -26,12 +26,12 @@ public class Inicio extends javax.swing.JFrame {
      * Metodo que inicia los iconos de los botones de la pantalla de inicio
      */
     public void iniciarIconos(){
-        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\fondoInicio.jpg"));
-        ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
+        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\fondoInicio.jpg"));
+        ImageIcon icon = new ImageIcon(Global.getPath()+"\\recursos\\icono.png");
         setIconImage(icon.getImage());
-        buttonSimulacion.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonSimulador.png"));
-        buttonAyuda.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonAyuda.png"));
-        buttonDesarrolladores.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonDesarrolladores.png"));
+        buttonSimulacion.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\botonSimulador.png"));
+        buttonAyuda.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\botonAyuda.png"));
+        buttonDesarrolladores.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\recursos\\botonDesarrolladores.png"));
     }
 
     /**

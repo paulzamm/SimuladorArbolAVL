@@ -1,4 +1,4 @@
-package com.grupo5.arbolavlsimulator;
+package arbolavlsimulator;
 /**
  * Clase Comun contiene los metodos globales a todos los controladores
  * @author Bertha Mazon
@@ -21,7 +21,7 @@ public class Global {
         File currDir = new File(".");
         String path = currDir.getAbsolutePath();
         path=path.substring(0,path.length()-2);
-        path+="\\src\\main\\java\\";
+        path+="\\src\\";
         return path;
     }
 }
