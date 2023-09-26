@@ -245,7 +245,7 @@ public class Simulador extends javax.swing.JFrame {
         textoAviso.setForeground(new java.awt.Color(255, 51, 51));
         jPanel2.add(textoAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 240, 100));
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 8, 1));
         jSpinner1.setFocusable(false);
         jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 200, 40));
 
@@ -435,10 +435,10 @@ public class Simulador extends javax.swing.JFrame {
 
         getContentPane().add(jPanel4, java.awt.BorderLayout.LINE_END);
 
-        PanelCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelCentral.setLayout(new java.awt.BorderLayout());
 
         jScrollPaneMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 10));
-        PanelCentral.add(jScrollPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 570));
+        PanelCentral.add(jScrollPaneMain, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(PanelCentral, java.awt.BorderLayout.CENTER);
 
