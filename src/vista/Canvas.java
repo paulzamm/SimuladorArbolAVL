@@ -57,15 +57,12 @@ public class Canvas extends javax.swing.JPanel {
         int x = AlgoritmosArbol.nodosHojas(arbol.getRaiz())*200+200;
         int y =  arbol.altura()*75;
         
-        int w = defaultSize.width;
-        int h = defaultSize.height;
+        int width = defaultSize.width;
+        int height = defaultSize.height;
         
-        if(x>defaultSize.width){
-            w = x;
-            if(y>defaultSize.height)
-                h = y;
-            this.setPreferredSize(new Dimension(w, h));
-        }
+        if(x>defaultSize.width)width = x;
+        if(y>defaultSize.height)height = y;
+        this.setPreferredSize(new Dimension(width, height));
         
         repaint();
     }
@@ -90,6 +87,7 @@ public class Canvas extends javax.swing.JPanel {
      * @param nodo 
      */
     public void dibujarNodo(Graphics g, int x, int y, NodoArbol<Integer> nodo){
+    	int anchoExtra;
         if(nodo != null) {
             g.setColor(Color.GREEN);
             g.fillOval(x, y, 30, 30);
@@ -103,15 +101,15 @@ public class Canvas extends javax.swing.JPanel {
             g.setFont(new Font( "Arial", Font.ITALIC, 10 ) );
             g.drawString(nodo.getFe()+"", x+8+5, y+18-20);
             
-            int anchoExtra = AlgoritmosArbol.numeroDeNodosCompleto(nodo)*(80/2);
+            anchoExtra = AlgoritmosArbol.numeroDeNodosCompleto(nodo)*(40);
             g.setColor(Color.BLACK);
             if(nodo.getIz() != null)
-		g.drawLine(x+15, y+15, x-50-anchoExtra+15, y+75+15);
-            if(nodo.getDe() != null)
-		g.drawLine(x+15, y+15, x+50+anchoExtra+15, y+75+15);
+            	g.drawLine(x+15, y+15, x-50-anchoExtra+15, y+75+15);
+	        if(nodo.getDe() != null)
+	         	g.drawLine(x+15, y+15, x+50+anchoExtra+15, y+75+15);
             dibujarNodo(g, x-50-anchoExtra, y+75, nodo.getIz());
             dibujarNodo(g, x+50+anchoExtra, y+75, nodo.getDe());
-	}
+        }
     
     }
     
