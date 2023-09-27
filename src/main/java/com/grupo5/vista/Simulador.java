@@ -9,7 +9,6 @@ import com.grupo5.arbolavlsimulator.AlgoritmosArbol;
 import com.grupo5.arbolavlsimulator.Global;
 import static com.grupo5.vista.Simulador.estadoBotones;
 import static com.grupo5.vista.Simulador.mostrarCanvas;
-import java.awt.CardLayout;
 import java.awt.Color;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import javax.swing.BorderFactory;
@@ -22,20 +21,19 @@ import javax.swing.ImageIcon;
 public class Simulador extends javax.swing.JFrame {
 
     /**
-     * Creates new form Simulador2
+     * Creates new form Simulador
      */
     public Simulador() {
+        ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         arbol = new ArbolAVL<>();
         Simulador.canvas = new Canvas(arbol);
         setLocationRelativeTo(this);
-        ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
         setIconImage(icon.getImage());
         limpiarAccion(true);
         estadoBotones("Generar");
         canvas.setBounds(0, 0, 2000, 2000);
-        mostrarCanvas();
     }
     private static ArbolAVL<Integer> arbol;
     private static Canvas canvas;
@@ -77,16 +75,15 @@ public class Simulador extends javax.swing.JFrame {
      */
     public void informacionEstadoArbol(){
         limpiarEstadoArbol();
-        textNumNodos.setText(textNumNodos.getText()+" "+arbol.numeroDeNodos());
-        textAltura.setText(textAltura.getText()+" "+arbol.altura());
-        TextNodoMenor.setText(TextNodoMenor.getText()+" "+arbol.menor());
-        TextNodoMayor.setText(TextNodoMayor.getText()+" "+arbol.mayor());
-        txtAreaRecorridos.append("In Order: " +AlgoritmosArbol.textoInOrder(arbol.getRaiz(), new StringBuffer())
-            + "\n\nPre Order: "+AlgoritmosArbol.textoPreOrder(arbol.getRaiz(), new StringBuffer())
-            + "\n\nPost Order: "+AlgoritmosArbol.textoPostOrder(arbol.getRaiz(), new StringBuffer())
-            + "\n\nAmplitud: "+AlgoritmosArbol.textoAmplitud(arbol.getRaiz())
-            + "\n\nNiveles: "+AlgoritmosArbol.textoAmplitudNiveles(arbol));
-        
+        textNumNodos.setText(textNumNodos.getText().concat(String.valueOf(arbol.numeroDeNodos())));
+        textAltura.setText(textAltura.getText().concat(String.valueOf(arbol.altura())));
+        TextNodoMenor.setText(TextNodoMenor.getText().concat(String.valueOf(arbol.menor())));
+        TextNodoMayor.setText(TextNodoMayor.getText().concat(String.valueOf(arbol.mayor())));
+        txtAreaRecorridos.append(AlgoritmosArbol.textoInOrder(arbol.getRaiz(), new StringBuffer("In Order: " )));
+        txtAreaRecorridos.append(AlgoritmosArbol.textoPreOrder(arbol.getRaiz(), new StringBuffer("\n\nPre Order: ")));
+        txtAreaRecorridos.append(AlgoritmosArbol.textoPostOrder(arbol.getRaiz(), new StringBuffer("\n\nPost Order: ")));
+        txtAreaRecorridos.append("\n\nAmplitud: "+AlgoritmosArbol.textoAmplitud(arbol.getRaiz()));
+        txtAreaRecorridos.append("\n\nNiveles: "+AlgoritmosArbol.textoAmplitudNiveles(arbol));
     }
     
     /**

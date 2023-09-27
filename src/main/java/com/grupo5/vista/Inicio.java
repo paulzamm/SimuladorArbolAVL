@@ -26,9 +26,9 @@ public class Inicio extends javax.swing.JFrame {
      * Metodo que inicia los iconos de los botones de la pantalla de inicio
      */
     public void iniciarIconos(){
-        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\fondoInicio.jpg"));
         ImageIcon icon = new ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\icono.png");
         setIconImage(icon.getImage());
+        jLabel1.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\fondoInicio.jpg"));
         buttonSimulacion.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonSimulador.png"));
         buttonAyuda.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonAyuda.png"));
         buttonDesarrolladores.setIcon(new javax.swing.ImageIcon(Global.getPath()+"\\com\\grupo5\\recursos\\botonDesarrolladores.png"));
@@ -99,8 +99,9 @@ public class Inicio extends javax.swing.JFrame {
      * @param evt 
      */
     private void buttonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAyudaActionPerformed
+        java.awt.Desktop desktop;
         if(java.awt.Desktop.isDesktopSupported()){
-            java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+            desktop = java.awt.Desktop.getDesktop();
             if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
                 try{
                     java.net.URI uri = new java.net.URI("https://utmachalaeduec-my.sharepoint.com/:b:/g/personal/mmalla1_utmachala_edu_ec/EZW0iFR4hAFDnXxoA8Yv5_sBLxQsSZajAGSeqd4YLWlu7g?e=qUL4Ib");
@@ -116,7 +117,7 @@ public class Inicio extends javax.swing.JFrame {
     /** 
      * Metodo ejecutado cuando el boton Desarrolladores es accionado
      * <br>
-     * Crea un nuevo form {@link Simulador} y lo hace visible.
+     * Crea un nuevo form {@link InfoDesarrolladores} y lo hace visible.
      * Redirecciona al usuario a la pantalla de información de Desarrolladores.
      * @param evt 
      */

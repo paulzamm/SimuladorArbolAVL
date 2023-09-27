@@ -49,8 +49,8 @@ public class AlgoritmosArbol {
         if(arbol!=null) {
             sb.append(arbol.getClave());
             sb.append(" ");
-            textoInOrder(arbol.getIz(), sb);
-            textoInOrder(arbol.getDe(), sb);
+            textoPreOrder(arbol.getIz(), sb);
+            textoPreOrder(arbol.getDe(), sb);
 	}
         return sb.toString();
     }
@@ -65,8 +65,8 @@ public class AlgoritmosArbol {
      */
     public static String textoPostOrder(NodoArbol arbol, StringBuffer sb){
         if(arbol!=null) {			
-            textoInOrder(arbol.getIz(), sb);
-            textoInOrder(arbol.getDe(), sb);
+            textoPostOrder(arbol.getIz(), sb);
+            textoPostOrder(arbol.getDe(), sb);
             sb.append(arbol.getClave());
             sb.append(" ");
 	}
@@ -196,7 +196,7 @@ public class AlgoritmosArbol {
             if(arbol.getIz() == null && arbol.getDe() == null){
                 return 1;
             }
-            return numeroDeNodosCompleto(arbol.getIz()) + numeroDeNodosCompleto(arbol.getDe());
+            return nodosHojas(arbol.getIz()) + nodosHojas(arbol.getDe());
         }
         return 0;
     }
